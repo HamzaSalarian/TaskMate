@@ -3,5 +3,14 @@
     <style name="Base.Theme.TaskMate" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your dark theme here. -->
         <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
+        <item name="floatingActionButtonStyle">@style/FloatingActionButtonStyle</item>
+    </style>
+
+    <style name="FloatingActionButtonStyle" parent="Widget.Design.FloatingActionButton">
+        <item name="shapeAppearanceOverlay">@style/fabstyle1</item>
+    </style>
+
+    <style name="fabstyle1" parent="ShapeAppearance.Material3.SmallComponent">
+        <item name="cornerSize">50%</item>
     </style>
 </resources>
