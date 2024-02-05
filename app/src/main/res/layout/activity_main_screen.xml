@@ -43,9 +43,10 @@
     </LinearLayout>
 
     <FrameLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/index_frame">
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/index_frame"
+        android:layout_gravity="center_vertical">
 
     </FrameLayout>
 
@@ -79,6 +80,7 @@
         android:layout_height="wrap_content"
         android:background="@drawable/float_act_back"
         android:backgroundTint="#8685e7"
+        android:id="@+id/fab1"
         android:src="@drawable/baseline_add_24"
         />
 

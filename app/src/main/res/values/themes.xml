@@ -13,5 +13,15 @@
     <style name="fabstyle1" parent="ShapeAppearance.Material3.SmallComponent">
         <item name="cornerSize">50%</item>
     </style>
+
+    <style name="CustomTimePickerDialog" parent="ThemeOverlay.Material3.MaterialTimePicker">
+        <!-- Customize your style attributes here -->
+        <item name="android:colorAccent">#8685e7</item>
+        <item name="android:background">#000000</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textColorHighlight">#8686e7</item>
+        <!-- Add other style attributes as needed -->
+    </style>
+
     <style name="Theme.TaskMate" parent="Base.Theme.TaskMate" />
 </resources>
