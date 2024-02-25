@@ -9,11 +9,13 @@ import android.widget.TimePicker;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.DialogFragment;
 
+import java.sql.Time;
 import java.util.Calendar;
 
 public class TimePickerFragment extends DialogFragment implements TimePickerDialog.OnTimeSetListener {
 
     private int theme;
+    TimePickerDialog.OnTimeSetListener onTimeSetListener;
     public TimePickerFragment(int customTimePickerDialog) {
 
         this.theme = customTimePickerDialog;
@@ -33,6 +35,14 @@ public class TimePickerFragment extends DialogFragment implements TimePickerDial
 
     public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
         // Do something with the time the user picks.
+
+        if (onTimeSetListener != null){
+            onTimeSetListener.onTimeSet(view, hourOfDay, minute);
+        }
+    }
+
+    public void setOnTimeSetListener(TimePickerDialog.OnTimeSetListener listener){
+        this.onTimeSetListener = listener;
     }
 
 }

@@ -10,13 +10,19 @@
 
     >
 
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_anchor="@id/bottom_appBar"
+        app:layout_anchorGravity="top">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:layout_marginTop="20dp"
         android:gravity="center_vertical"
-        >
+        android:id="@+id/headerLayout">
 
         <ImageView
             android:layout_width="25dp"
@@ -46,9 +52,33 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/index_frame"
-        android:layout_gravity="center_vertical">
+        android:layout_gravity="center_vertical"
+        android:layout_below="@id/headerLayout"
+        >
+
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/swipeRefresh"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+
+                android:layout_marginBottom="150dp"/>
+
+
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+
+
 
     </FrameLayout>
+
+    </RelativeLayout>
 
     <com.google.android.material.bottomappbar.BottomAppBar
         android:layout_width="match_parent"
@@ -68,6 +98,7 @@
             app:labelVisibilityMode="labeled">
         </com.google.android.material.bottomnavigation.BottomNavigationView>
     </com.google.android.material.bottomappbar.BottomAppBar>
+
 
 
     <RelativeLayout
